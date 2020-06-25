@@ -31,7 +31,7 @@ $clientes = ControladorFormularios::ctrSeleccionarClientes();
       <td style="font-size:80%"><?php echo $value["rnc"]; ?></td>
       <td style="font-size:80% "><?php echo $value["empresa"]; ?></td>
       <td style="font-size:80%"><?php echo $value["telefono1"]; ?></td>
-     <!-- <td style="font-size:80%"><?php echo $value["contacto"]; ?></td>-->
+     <td style="font-size:80%"><?php echo $value["contacto"]; ?></td>
       <td>
       <div class="btn-group">
       <button class="btn btn-success btn-xs"><i class="far fa-eye"></i></button>
