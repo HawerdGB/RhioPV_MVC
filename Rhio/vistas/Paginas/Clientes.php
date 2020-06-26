@@ -10,7 +10,6 @@ $clientes = ControladorFormularios::ctrSeleccionarClientes();
       <h4>
         Clientes
         <span>
-          {" "}
           <button id="btnNuevo" type="button" class="btn btn-success">
             Nuevo
           </button>
