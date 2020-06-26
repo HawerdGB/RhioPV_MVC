@@ -4,8 +4,13 @@ $bancos = ControladorFormularios::ctrSeleccionarBancos();
 ?>
 
 <div class="container">
-    <h4>Bancos</h4>
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>Bancos<span> <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button></span></h4>
+           
+        </div>
     </div>
+</div>
     <div class="table-responsive-sm">
     <table id="example" class="table table-striped table-hover">
   <thead>
