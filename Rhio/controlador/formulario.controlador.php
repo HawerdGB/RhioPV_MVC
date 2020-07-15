@@ -1,27 +1,29 @@
 <?php
+session_start();
 
-  session_start();
- class ControladorFormularios{
+class ControladorFormularios{
 
     /*==================================
-     Registro Usuarios
+     Registro Clientes
      ===================================*/
 
-     static public function ctrRegistroUsuario(){
-
-        $tabla ="usuarios";
-
-        $datos = array("nombre" => $_POST["rNombre"],
-                        "clave" => $_POST["rClave"],
-                        "activo" => $_POST["rActivo"],
-                        "mail" => $_POST["rMail"],
-                        "usuario" => $_POST["rUsuario"]);
-
-                        $respuesta = ModeloFormularios::mdlRegistro($tabla, $datos);
-
-                        return $respuesta;
+     static public function ctrRegistroClientes(){
+        if(isset($_POST["rEmpresa"])){
+           $tabla ='clientes';
+           $datos = array("rnc"=>$_POST["rRNC"],
+                          "empresa" =>$_POST["rEmpresa"],
+                          "contacto" =>$_POST["rContacto"],
+                          "telefono1"=>$_POST["rTelefono1"],
+                          "telefono2"=>$_POST["rTelefono2"],
+                          "telefono3"=>$_POST["rTelefono3"],
+                          "direccion"=>$_POST["rDireccion"],
+                          "mail"=>$_POST["rEmail"]);
+           $respuesta = ModeloFormularios::mdlRegistroClientes($tabla, $datos);
+          
+           return $respuesta;
+        }
      }
-
+ 
  
  /*=============================================
   Ingreso al sistema

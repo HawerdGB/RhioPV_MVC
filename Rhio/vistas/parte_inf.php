@@ -68,11 +68,12 @@ function myFunction(){
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 
 <!-- Page level plugins -->
-<!--<script src="vendor/chart.js/Chart.min.js"></script>-->
+<script src="HTML/vendor/chart.js/Chart.min.js"></script>
 
 <!-- Page level custom scripts -->
-<!--<script src="js/demo/chart-area-demo.js"></script>-->
-<!--<script src="js/demo/chart-pie-demo.js"></script>-->
+<script src="HTML/js/demo/chart-area-demo.js"></script>
+<script src="HTML/js/demo/chart-pie-demo.js"></script>
+<script src="HTML/js/demo/chart-bar-demo.js"></script>
 
 <!-- popper-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

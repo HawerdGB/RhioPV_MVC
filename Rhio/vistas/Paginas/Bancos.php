@@ -29,8 +29,8 @@ $bancos = ControladorFormularios::ctrSeleccionarBancos();
       <td style="font-size:90%"><?php echo $key+1 ;?></td>
       <td style="font-size:90%"><?php echo $value["BANCO"]; ?></td>
       <td>
-      <div class="btn-group">
-      <button class="btn btn-success"><i class="far fa-eye"></i></button>
+      <div class="btn-group  btn-group-sm">
+      <button class="btn btn-primary"><i class="far fa-eye"></i></button>
       <button class="btn btn-warning"><i class="fas fa-pencil-alt"></i></button>
       <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
       </div>

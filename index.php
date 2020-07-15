@@ -1,3 +1,7 @@
+<?php
+require_once "Rhio/controlador/formulario.controlador.php";
+require_once "Rhio/modelos/formulario.modelo.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -86,10 +90,7 @@
         opacity: 1;
     }
     </style>
-    <?php
-require_once "Rhio/controlador/formulario.controlador.php";
-require_once "Rhio/modelos/formulario.modelo.php";
-?>
+    
 </head>
 
 <body>

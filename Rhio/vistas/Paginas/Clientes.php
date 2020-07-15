@@ -8,16 +8,17 @@ $clientes = ControladorFormularios::ctrSeleccionarClientes();
   <div class="row">
     <div class="col-lg-6">
       <h4>
-        Clientes
+       Lista de Clientes
         <span>
-          <button id="btnNuevo" type="button" class="btn btn-success">
-            Nuevo
+          <button title="Agregar Nuevo Registro" onclick="location.href='index.php?pagina=IClientes'" id="btnNuevo" type="button" class="btn btn-success">
+                <i class="fas fa-plus-square"></i>
+                    
           </button>
         </span>
       </h4>
     </div>
   </div>
-</div>;
+</div>
 
 
 <div class="table-responsive-sm">
@@ -40,10 +41,12 @@ $clientes = ControladorFormularios::ctrSeleccionarClientes();
                 <td style="font-size:80% "><?php echo $value["empresa"]; ?></td>
                 <td style="font-size:80%"><?php echo $value["telefono1"]; ?></td>
                 <td>
-                    <div class="btn-group">
-                        <button class="btn btn-success btn-xs"><i class="far fa-eye"></i></button>
-                        <button class="btn btn-warning btn-xs"><i class="fas fa-pencil-alt"></i></button>
-                        <button class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+                    <div class="btn-group  btn-group-sm">
+                    
+                        <button onclick="location.href='index.php?pagina=IClientes'" title="Ver Informacion" class="btn btn-primary btn-xs"><i class="far fa-eye"></i></button>
+                       <!-- <button class="btn btn-warning btn-xs"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>-->
+                    
                     </div>
                 </td>
             </tr>

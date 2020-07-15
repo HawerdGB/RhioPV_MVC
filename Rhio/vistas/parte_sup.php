@@ -306,6 +306,9 @@ return;
                 $_GET["pagina"] == "ConfGeneral" ||
                 $_GET["pagina"] == "Usuarios" ||
                 $_GET["pagina"] == "Salir" ||
+                $_GET["pagina"] == "IClientes" ||
+                $_GET["pagina"] == "IProductos" ||
+                $_GET["pagina"] == "IProveedor" ||
                 $_GET["pagina"] == "Inicio" )
                 {
                 include 'Paginas/'.$_GET['pagina'].'.php';

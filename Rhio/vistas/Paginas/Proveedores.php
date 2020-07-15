@@ -6,7 +6,7 @@ $proveedores = ControladorFormularios::ctrSeleccionarProveedores();
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <h4>Proveedores<span> <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button></span></h4>
+            <h4>Lista de Proveedores<span> <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button></span></h4>
            
         </div>
     </div>
@@ -37,8 +37,8 @@ $proveedores = ControladorFormularios::ctrSeleccionarProveedores();
       <td style="font-size:80%"><?php echo $value["telefono1"]; ?></td>
       <td style="font-size:80%"><?php echo $value["telefono2"]; ?></td>
       <td>
-      <div class="btn-group">
-      <button class="btn btn-success btn-xs"><i class="far fa-eye"></i></button>
+      <div class="btn-group  btn-group-sm">
+      <button class="btn btn-primary btn-xs"><i class="far fa-eye"></i></button>
       <button class="btn btn-warning btn-xs"><i class="fas fa-pencil-alt"></i></button>
       <button class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
       </div>
