@@ -75,7 +75,7 @@ require_once "Rhio/modelos/formulario.modelo.php";
     }
 
     /* Set a style for the submit button */
-     .btn {
+    .btn {
         background-color: dodgerblue;
         color: white;
         padding: 15px 20px;
@@ -86,7 +86,7 @@ require_once "Rhio/modelos/formulario.modelo.php";
         border-radius: 5px;
     }
 
-      .btn:hover {
+    .btn:hover {
         opacity: 1;
     }
     </style>
@@ -100,8 +100,7 @@ require_once "Rhio/modelos/formulario.modelo.php";
                 <div class="col-12 user-img">
                     <img src="static/img/avatar6.png" />
                 </div>
-                <!--<form action="validar.php" method="POST" class="col-12">-->
-                <form method="POST" class="col-12">
+                    <form method="POST" class="col-12">
                     <div>
                         <div class="input-container">
                             <i class="fa fa-user icon"></i>
@@ -118,10 +117,10 @@ require_once "Rhio/modelos/formulario.modelo.php";
                     </div>
 
                     <?php
-                  
+                
                     $ingreso = new ControladorFormularios();
                     $ingreso -> ctrIngreso();
-                   
+                
                     ?>
 
                     <button id="btnRegistro" type="submit" value='Ingresar' class="btn btn-primary"><i

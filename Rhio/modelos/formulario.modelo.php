@@ -72,7 +72,7 @@ static public function mdlSeleccionar($tabla, $item, $valor){
     return $stmt -> fetchAll();
     }else{
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla 
-        where $item=:$item order by desc");
+        where $item=:$item");
 
         $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

@@ -4,31 +4,31 @@ session_start();
 class ControladorFormularios{
 
     /*==================================
-     Registro Clientes
-     ===================================*/
+          Registro Clientes
+      ===================================*/
 
-     static public function ctrRegistroClientes(){
-        if(isset($_POST["rEmpresa"])){
-           $tabla ='clientes';
-           $datos = array("rnc"=>$_POST["rRNC"],
-                          "empresa" =>$_POST["rEmpresa"],
-                          "contacto" =>$_POST["rContacto"],
-                          "telefono1"=>$_POST["rTelefono1"],
-                          "telefono2"=>$_POST["rTelefono2"],
-                          "telefono3"=>$_POST["rTelefono3"],
-                          "direccion"=>$_POST["rDireccion"],
-                          "mail"=>$_POST["rEmail"]);
-           $respuesta = ModeloFormularios::mdlRegistroClientes($tabla, $datos);
-          
-           return $respuesta;
-        }
+    static public function ctrRegistroClientes(){
+      if(isset($_POST["rEmpresa"])){
+        $tabla ='clientes';
+        $datos = array("rnc"=>$_POST["rRNC"],
+                      "empresa" =>$_POST["rEmpresa"],
+                      "contacto" =>$_POST["rContacto"],
+                      "telefono1"=>$_POST["rTelefono1"],
+                      "telefono2"=>$_POST["rTelefono2"],
+                      "telefono3"=>$_POST["rTelefono3"],
+                      "direccion"=>$_POST["rDireccion"],
+                      "mail"=>$_POST["rEmail"]);
+        $respuesta = ModeloFormularios::mdlRegistroClientes($tabla, $datos);
+      
+        return $respuesta;
+    }
      }
  
- 
+    
  /*=============================================
   Ingreso al sistema
   ==============================================*/
-     public function ctrIngreso(){
+    public function ctrIngreso(){
         
         if(isset($_POST["iusuario"])){
 
@@ -36,12 +36,13 @@ class ControladorFormularios{
           $item ="usuario";
           $valor = $_POST["iusuario"];
         
-          $respuesta = ModeloFormularios::mdlSeleccionar($tabla, $item, $valor);
-            if(empty($respuesta)){
+          $respuesta1 = ModeloFormularios::mdlSeleccionar($tabla, $item, $valor);
+            if(empty($respuesta1)){
+        
               echo '<div class="alert alert-danger">Error Login<br>Usuario no registrado</div>';
             }else{
 
-         
+
           if(empty($_POST["iclave"]) || empty($_POST["iusuario"]))
           {
             echo '<script>
@@ -53,14 +54,14 @@ class ControladorFormularios{
           echo '<div class="alert alert-danger">Error Login<br>Usuario y/o clave no deben estar vacios</div>';   
           }else{
               
-            if(($respuesta["clave"] == $_POST["iclave"]) && 
-             ($respuesta["usuario"] == $_POST["iusuario"])){
+            if(($respuesta1["clave"] == $_POST["iclave"]) && 
+            ($respuesta1["usuario"] == $_POST["iusuario"])){
             
             
             $_SESSION["validarIngreso"] = 'ok';
-            $_SESSION["nombre"] = $respuesta["nombre"];
-            $_SESSION["nivel"] = $respuesta["nivel"];
-            $_SESSION["imagen"] = $respuesta["imagen"];
+            $_SESSION["nombre"] = $respuesta1["nombre"];
+            $_SESSION["nivel"] = $respuesta1["nivel"];
+            $_SESSION["imagen"] = $respuesta1["imagen"];
 
             echo '<script>
            if ( window.history.replaceState ) {
