@@ -11,8 +11,9 @@ $bancos = ControladorFormularios::ctrSeleccionarBancos();
         </div>
     </div>
 </div>
+    <div class="container">
     <div class="table-responsive-sm">
-    <table id="example" class="table table-striped table-hover">
+    <table id="mitabla" class="table table-striped table-hover">
   <thead>
     <tr>  
     <th >#</th>
@@ -30,7 +31,7 @@ $bancos = ControladorFormularios::ctrSeleccionarBancos();
       <td style="font-size:90%"><?php echo $value["BANCO"]; ?></td>
       <td>
       <div class="btn-group  btn-group-sm">
-      <button class="btn btn-primary"><i class="far fa-eye"></i></button>
+      <button type="button" class="btn btn-primary " data-toggle="modal" id="eyebtn" data-target="#mimodal"><i class="far fa-eye"></i></button>
       <button class="btn btn-warning"><i class="fas fa-pencil-alt"></i></button>
       <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
       </div>
@@ -43,5 +44,26 @@ $bancos = ControladorFormularios::ctrSeleccionarBancos();
   </tbody>
 </table>
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="mimodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Bancos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--fin modal-->
+</div>
 

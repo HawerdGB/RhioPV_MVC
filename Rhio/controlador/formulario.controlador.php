@@ -97,6 +97,16 @@ class ControladorFormularios{
     return $respuesta;
 
   }
+  /*=============================================
+  Seleccionar registros un cliente
+  ==============================================*/
+
+  static public function ctrSeleccionarUnCliente($item, $valor){
+    $tabla ="clientes";
+    $respuesta = ModeloFormularios::mdlSeleccionar($tabla, $item, $valor);
+    return $respuesta;
+
+  }
    /*=============================================
   Seleccionar registros Marcas
   ==============================================*/

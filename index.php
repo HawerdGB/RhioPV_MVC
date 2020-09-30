@@ -25,10 +25,10 @@ require_once "Rhio/modelos/formulario.modelo.php";
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
 
     <style>
-    /*   body {
+      body {
         font-family: Arial, Helvetica, sans-serif;
     }
-*/
+
     * {
         box-sizing: border-box;
     }
@@ -94,6 +94,7 @@ require_once "Rhio/modelos/formulario.modelo.php";
 </head>
 
 <body>
+    <div class = "container">
     <div class="modal-dialog text-center">
         <div class="col-sm-8 main-section">
             <div class="modal-content">
@@ -132,6 +133,7 @@ require_once "Rhio/modelos/formulario.modelo.php";
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!--========================================================================-->

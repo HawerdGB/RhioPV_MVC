@@ -13,9 +13,10 @@ $marcas = ControladorFormularios::ctrSeleccionarMarcas();
     </div>
     </div>
 </div>
+<div class="container">
 <div class="table-responsive-sm">
 
-    <table id='example' class="table table-striped table-bordered" style="width:100%">
+    <table id='mitabla' class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>#</th>
@@ -44,4 +45,5 @@ $marcas = ControladorFormularios::ctrSeleccionarMarcas();
         </tbody>
 
     </table>
+</div>
 </div>

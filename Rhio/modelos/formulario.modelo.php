@@ -59,7 +59,7 @@ class ModeloFormularios{
 }
 
  /*==========================================================
-  Seleccionar todos los registros de la tablas seleccionadas
+  Seleccionar registros de la tablas seleccionadas
   ===========================================================*/
 static public function mdlSeleccionar($tabla, $item, $valor){
 
@@ -75,10 +75,14 @@ static public function mdlSeleccionar($tabla, $item, $valor){
         where $item=:$item");
 
         $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
+        
+        
 
     $stmt->execute();
 
+    
     return $stmt -> fetch(); 
+
     }
 
     

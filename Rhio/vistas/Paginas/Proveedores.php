@@ -11,8 +11,9 @@ $proveedores = ControladorFormularios::ctrSeleccionarProveedores();
         </div>
     </div>
 </div>
+  <div class ="container">
     <div class="table-responsive-sm">
-    <table id="example" class="table table-striped table-hover table-sm">
+    <table id="mitabla" class="table table-striped table-hover table-sm">
   <thead>
     <tr>
       <th>#</th>
@@ -52,4 +53,4 @@ $proveedores = ControladorFormularios::ctrSeleccionarProveedores();
 </table>
 </div>
 
-
+</div>
