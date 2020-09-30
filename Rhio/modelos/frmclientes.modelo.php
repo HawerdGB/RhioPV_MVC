@@ -43,12 +43,12 @@ switch($opcion){
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();                           
         break;
-    case 4:    
-        $consulta = "SELECT * FROM clientes";
-        $resultado = $conexion->prepare($consulta);
-        $resultado->execute();        
-        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-        break;
+   // case 4:    
+     //   $consulta = "SELECT * FROM clientes";
+       // $resultado = $conexion->prepare($consulta);
+       // $resultado->execute();        
+       // $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+      //  break;
 }
 
 print json_encode($data, JSON_UNESCAPED_UNICODE);//envio el array final el formato json a AJAX

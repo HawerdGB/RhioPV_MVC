@@ -1,26 +1,17 @@
 $(document).ready(function() {
     var id_cliente, opcion;
-    opcion = 4;
+    
         
     tablaClientes = $('#tablaClientes').DataTable({  
-               "ajax":{            
-            "url": "modelos/frmclientes.modelo.php", 
-            "method": 'POST', //usamos el metodo POST
-            "data":{opcion:opcion}, //enviamos opcion 4 para que haga un SELECT
-            "dataSrc":""
-        },
-        "columns":[
-            {"data": "id_cliente"},
-            {"data": "rnc"},
-            {"data": "empresa"},
-            {"data": "contacto"},
-            {"data": "telefono1"},
-            {"data": "telefono2"},
-            {"data": "telefono3"},
-            {"data": "direccion"},
-            {"data": "mail"},
-            {"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>edit</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>delete</i></button></div></div>"}
-        ],
+        responsive: "true",
+        "bProcessing": true,
+        "bDeferRender": true,	
+        "bServerSide": true,                
+        "sAjaxSource": "modelos/serverside/serversideClientes.php",	
+        "columnDefs": [ {
+            "targets": -1,        
+            "defaultContent": "<div class='wrapper text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar' data-toggle='tooltip' title='Editar'><i class='material-icons'>edit</i></button><button class='btn btn-danger btn-sm btnBorrar' data-toggle='tooltip' title='Eliminar'><span class='material-icons'>delete</span></button></div></div>"
+        } ],
         "language": {
             "sProcessing":     "Procesando...",
         "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -49,33 +40,34 @@ $(document).ready(function() {
             "colvis": "Visibilidad"
         }
         },
-        //aqui
-        responsive: "true",
-        dom: 'Blfrtip',       
-        buttons:[ 
-			{
-				extend:    'excelHtml5',
-				text:      '<i class="fas fa-file-excel"></i> ',
-				titleAttr: 'Exportar a Excel',
-				className: 'btn btn-success'
-			},
-			{
-				extend:    'pdfHtml5',
-				text:      '<i class="fas fa-file-pdf"></i> ',
-				titleAttr: 'Exportar a PDF',
-				className: 'btn btn-danger'
-			},
-			{
-				extend:    'print',
-				text:      '<i class="fa fa-print"></i> ',
-				titleAttr: 'Imprimir',
-				className: 'btn btn-info'
-			},
-		]	        
-        //aqui
-    });  
-    
-  
+         //aqui
+         dom:"<'row'<'col-sm-12 'B>>" + "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",      
+         buttons:[ 
+             {
+                 extend:    'excelHtml5',
+                 text:      '<i class="fas fa-file-excel"></i> ',
+                 titleAttr: 'Exportar a Excel',
+                 className: 'btn btn-success mb-2'
+                
+             },
+             {
+                 extend:    'pdfHtml5',
+                 text:      '<i class="fas fa-file-pdf"></i> ',
+                 titleAttr: 'Exportar a PDF',
+                 className: 'btn btn-danger mb-2'
+             },
+             {
+                 extend:    'print',
+                 text:      '<i class="fa fa-print"></i> ',
+                 titleAttr: 'Imprimir',
+                 className: 'btn btn-info mb-2'
+             },
+         ]	        
+         //aqui    
+});     
+
     
     var fila; //captura la fila, para editar o eliminar
     //submit para el Alta y Actualización
